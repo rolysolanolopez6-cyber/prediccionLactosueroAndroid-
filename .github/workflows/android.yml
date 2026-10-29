@@ -9,10 +9,9 @@ branches:
 jobs:
 build:
 runs-on: ubuntu-latest
-
 steps:
-  - name: Descargar proyecto
-    uses: actions/checkout@v4
+- name: Descargar proyecto
+uses: actions/checkout@v4
 
   - name: Configurar Java
     uses: actions/setup-java@v4
@@ -24,8 +23,7 @@ steps:
     uses: android-actions/setup-android@v3
 
   - name: Aceptar licencias de Android
-    run: |
-      yes | sdkmanager --licenses || true
+    run: yes | sdkmanager --licenses
 
   - name: Compilar APK
     run: |
@@ -37,3 +35,5 @@ steps:
     with:
       name: PrediccionLactosuero-APK
       path: app/build/outputs/apk/debug/*.apk
+
+  
