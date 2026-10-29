@@ -19,8 +19,10 @@ uses: actions/checkout@v4
       distribution: temurin
       java-version: '17'
 
-  - name: Configurar Android SDK
-    uses: android-actions/setup-android@v3
+   - name: Configurar Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools'
 
   - name: Aceptar licencias de Android
     run: yes | sdkmanager --licenses
