@@ -1,0 +1,49 @@
+{
+  "candidatos": [
+    {
+      "modelo": "Bosque aleatorio",
+      "mape_validacion_pct": 4.956020801253094,
+      "mape_prueba_pct": 8.699648191749345,
+      "r2_prueba": 0.8804001213613204,
+      "mae_prueba_L": 19.831574597913608
+    },
+    {
+      "modelo": "Regresión lineal",
+      "mape_validacion_pct": 13.031903368470681,
+      "mape_prueba_pct": 17.287163932683683,
+      "r2_prueba": 0.5726842368930429,
+      "mae_prueba_L": 46.490790409843584
+    }
+  ],
+  "modelo_desplegado": {
+    "modelo_seleccionado": "Bosque aleatorio",
+    "mape_validacion_pct": 4.956020801253094,
+    "mape_prueba_pct": 8.699648191749345,
+    "r2_prueba": 0.8804001213613204,
+    "mae_prueba_L": 19.831574597913608,
+    "umbral_mape_pct": 20.0,
+    "registros_validos": 80,
+    "fecha_desde": "2026-01-05",
+    "fecha_hasta": "2026-10-10",
+    "productos": [
+      "queso_fresco",
+      "queso_semimaduro",
+      "yogurt_griego"
+    ],
+    "features": [
+      "mes",
+      "tipo_producto",
+      "volumen_leche_L",
+      "grasa_leche_pct",
+      "proteina_leche_pct",
+      "solidos_totales_pct",
+      "temperatura_proceso_C",
+      "rendimiento_historico_movil_pct",
+      "agua_limpieza_L",
+      "anio",
+      "dia_del_anio",
+      "dia_semana"
+    ],
+    "descripcion": "Selección por MAPE de validación en partición cronológica 60/20/20. Modelo de despliegue reentrenado en el primer 80%; el último 20% se mantiene como prueba."
+  }
+}
